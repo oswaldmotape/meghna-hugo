@@ -23,11 +23,16 @@
 
 	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
 	{{ $custom := resources.Get "css/custom.css" | minify }}
-  <link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
+  	<link rel="stylesheet" href="{{ $custom.Permalink }}" media="screen">
 
 	{{ "<!--Favicon-->" | safeHTML }}
-	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
-	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="shortcut icon" sizes="32x32" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="icon" sizes="32x32" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="shortcut icon"  sizes="16x16" href="{{ `images/favicon-16x16.png` | absURL }}" type="image/x-icon">
+	<link rel="icon" sizes="16x16" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="shortcut icon" sizes="180x180" href="{{ `images/apple-touch-icon.png` | absURL }}" type="image/x-icon">
+	<link rel="icon" sizes="180x180" href="{{ `images/apple-touch-icon.png` | absURL }}" type="image/x-icon">
+	<link rel="manifest" href="{{ `images/site.manifest` }}">
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
@@ -42,5 +47,5 @@
 	{{ end }}
 
 	<!-- Add custom data-->
-	<script async src="https://tally.so/widgets/embed.js"></script>
+	<!-- <script async src="https://tally.so/widgets/embed.js"></script>-->
 </head>
