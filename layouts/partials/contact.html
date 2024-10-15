@@ -37,7 +37,7 @@
 			{{ if .contact_form.enable }}
 			{{ with .contact_form }}
 			<div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-				<form id="" class="form-meghna" method="post" role="form">
+				<form id="my-form" class="form-meghna" method="post" role="form">
 					<div class="form-group">
 						<input type="text" placeholder="{{ .name }}" class="form-control" name="name" id="name" autocomplete="on">
 					</div>
@@ -51,9 +51,10 @@
 						<textarea rows="6" placeholder="{{ .message }}" class="form-control" name="message" id="message"></textarea>
 					</div>
 					<div id="cf-submit">
-						<button type="submit" class="btn btn-outline-info btn-block">
+						<button type="submit" id="my-form-button" class="btn btn-outline-info btn-block">
 						Submit</button>
 					</div>
+					<p id="my-form-status"></p>
 				</form>
 			</div>
 			{{ end }}
